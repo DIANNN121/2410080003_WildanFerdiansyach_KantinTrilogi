@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_logo_kantin"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.KantinTrilogi">
+
+        <!-- Layar 1: Login (launcher) -->
+        <activity
+            android:name=".LoginActivity"
+            android:exported="true"
+            android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Layar 2: Beranda mahasiswa (menu + pesanan saya) -->
+        <activity
+            android:name=".HomeActivity"
+            android:exported="false" />
+
+        <!-- Layar 3: Form pesanan (Create / Update) -->
+        <activity
+            android:name=".OrderFormActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+
+        <!-- Layar 4: Panel petugas kantin (ubah status pesanan) -->
+        <activity
+            android:name=".StaffActivity"
+            android:exported="false" />
+    </application>
+
+</manifest>
